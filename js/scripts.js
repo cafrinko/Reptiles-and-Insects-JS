@@ -1,12 +1,14 @@
 $(document).ready(function() {
-  var age = parseInt(prompt("How old are you?"));
+  var animalselection = prompt("Do you want to learn about turtles, snakes, or insects?");
+  var selectionresult = animalselection.toLowerCase();
 
-  if (age > 21) {
-    $('#drinks').show();
-  } else if (age === 21) {
-    alert("Now don't go crazy!");
-    $('#drinks').show();
+  if (selectionresult === "turtles") {
+    $('#turtles').show();
+  } else if (selectionresult === "snakes") {
+    $('#snakes').show();
+  } else if (selectionresult === "insects"){
+    $('#insects').show();
   } else {
-    $('#under-21').show();
+    alert("Please enter either turtles, snakes, or insects")
   }
 });
